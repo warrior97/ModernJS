@@ -1,0 +1,85 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: normal;
+  letter-spacing: 0.2px;
+  color: #545e6f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #f1f2f5;
+}
+
+.header {
+  background: #ff9803;
+  padding: 20px 25px 0 25px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo-bootcamp {
+  height: 60px;
+  width: 150px;
+  background: url('../img/logo_itbootcamp.png') no-repeat center center;
+  background-size: contain;
+}
+
+.logo-name {
+  margin: 0 0 0 14px;
+  line-height: 60px;
+  font-size: 2.0rem;
+  color: #fff;
+}
+
+.header-logo img {
+  height: 100%;
+}
+
+#app {
+  text-align: center;
+}
+#social a{
+  color:white;
+  text-decoration: none;
+}
+#social a:active{
+  color:white;
+  text-decoration: none;
+}
+
+.social-icon{
+  width: 24px;
+  height: 24px;
+
+}
+.menu{
+  display: flex;
+  flex-direction: row;
+  width:100%;
+  height: 4.5rem;
+  margin:5px 0 0 0; 
+}
+.menu div{
+  display:flex;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.menu div:hover{
+  background-color: #e48808; 
+}
+.menu div label{
+  margin: 0 auto;
+  line-height: 5.0rem;
+  font-size: 2.0rem;
+}
