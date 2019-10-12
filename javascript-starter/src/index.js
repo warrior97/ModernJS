@@ -109,6 +109,7 @@ switch (dayOfWeek) {
     case 4: dayOfWeekString = 'Thursday'; break;
     case 5: dayOfWeekString = 'Friday'; break;
     case 6: dayOfWeekString = 'Saturday'; break;
+    default: dayOfWeekString = 'ERROR!';
 
 }
 console.log(dayOfWeekString);
@@ -127,8 +128,8 @@ app.innerHTML += `<h2>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${mon
 //Napisati program koji ispsuje brojeve od 1 do 5 u konzoli
 //Pitati zasto LET;
 {
-    for (let brojac = 1; brojac <= 5; brojac += 1) {
-        console.log(brojac);
+    for (let counter = 1; counter <= 5; counter += 1) {
+        console.log(counter);
     }
 }
 
@@ -142,11 +143,11 @@ app.innerHTML += `<h2>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${mon
 
 {
     let N = 10;
-    let sumaBr = 0;
-    for (let brojac = 1; brojac <= N; brojac++) {
-        sumaBr += brojac;
+    let sumNum = 0;
+    for (let counter = 1; counter <= N; counter++) {
+        sumNum += counter;
     }
-    console.log(`Suma brojeva od 1 do ${N} je ${sumaBr}`);
+    console.log(`The sum of numbers from 1 to ${N} is ${sumNum}`);
 }
 
 //Smisliti zadatak za vezbu
@@ -156,25 +157,158 @@ app.innerHTML += `<h2>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${mon
 //Funkcije
 
 
-function saberiBrojeve(granica) {
-    let sumaBr = 0;
-    for (let brojac = 1; brojac <= granica; brojac++) {
-        sumaBr += brojac;
+function sumNumbers(limit) {
+    let sumNum = 0;
+    for (let counter = 1; counter <= limit; counter++) {
+        sumNum += counter;
     }
-    return sumaBr;
+    return sumNum;
 }
 
 {
-    
-    let N=10;
-    let sumaBr = saberiBrojeve(N);
+
+    let N = 10;
+    let sumNum = sumNumbers(N);
     //saberiBrojeve(N);
-    console.log(`Suma brojeva funkcijom od 1 do ${N} je ${sumaBr}`);
+    console.log(`The sum of numbers from 1 to ${N} is ${sumNum}`);
 }
 //Zadaci za vezbanje s funkcijama
 
 
 
 //Nedelja 3
+//funkcije nizovi
+//Dan 1
+//teroijska prica o nizovima
+//zadatak ispis elemente niza
+{
+    let array = new Array();
+    array.push(10);
+    array.push('Ads');
+    array.push(15);
+    console.log(array);
+    array.forEach(element => {
+        console.log(element);
+    });
+}
+
+//zadatak sumiraj elemente niza
+//Zadatak nadji najveci
+
+//dan 2
+//Napisati funkciju koja ispsisuje dan na nosovu broja
+
+function getDayFromNumberDay(day) {
+    switch (day) {
+        case 0: return 'Sunday';
+        case 1: return 'Monday';
+        case 2: return 'Tuesday';
+        case 3: return 'Wednesday';
+        case 4: return 'Thursday';
+        case 5: return 'Friday';
+        case 6: return 'Saturday';
+        default: return 'ERROR!';
+
+    }
+}
+getDayFromNumberDay(dateNow.getDay());
+
+//unction calculatePizzaPrice(pizzaBase,...rest){ <-pogledaj :D
+function calculatePizzaPrice(pizzaBase, count) {
+    if (dayOfWeek === danZaPopust) {
+        let cenaPop = 0.85 * pizzaBase;
+        return cenaPop * count;
+
+    } else {
+        return pizzaBase * count;
+    }
+
+}
+{
+    let price = calculatePizzaPrice(10, 10);
+    console.log(`Value of pizza selected is ${price} `);
+}
 //DOM
-//Popunjavanje forme i eventi
+//Dan 3
+//Broj pica
+
+//Zadatak1
+//Povecati broj pizza kad se klikne na pizu
+var pizzaCount = 0;
+function incrementPizzaCount() {
+    pizzaCount++;
+    console.log(pizzaCount);
+}
+//incrementPizzaCount();
+
+var pizzas = document.getElementsByClassName('element');
+for (let pizza of pizzas) {
+    pizza.addEventListener('click', function () {
+        selectPizza(pizza);
+    });
+}
+var counterField = document.getElementById('cnt');
+counterField.innerHTML = `${pizzaCount}`;
+function selectPizza(e) {
+    console.log(e);
+    incrementPizzaCount();
+    //ubaciti u korpu podatke o pici;
+    counterField.innerHTML = `${pizzaCount}`;
+}
+
+//Dan 4
+//Jos DOM-a
+// prototip dodavanje porucene pize u listu
+
+
+
+//Nedelja 4
+//Dan 1
+//Objekti
+//Kreiranje objekta pizze;
+//neki jednostavan objekat
+var pizzaObjects = {
+    name: 'Capricosa',
+    sizes: [
+        {
+            name: 'XL',
+            size: 50,
+            price: 600
+        }
+        , {
+            name: 'L',
+            size: 30,
+            price: 450
+        }, {
+            name: 'M',
+            size: 15,
+            price: 300
+        }, {
+            name: 'S',
+            size: 10,
+            price: 150
+        }
+    ]
+};
+console.log(pizzaObjects);
+class Size {
+    constructor(name, size, price) {
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
+
+}
+{
+    let sizetest = new Size('XL', 50, 600);
+    console.log(sizetest.name);
+}
+let sizes = [new Size('XL', 50, 600),new Size('L',32    ,450)];
+console.log(sizes);
+var allPizzas = [{
+    name: 'Capricosa',
+    sizes: sizes
+}, {name: 'Margarita',
+    sizes: sizes
+}]
+console.log(allPizzas);
