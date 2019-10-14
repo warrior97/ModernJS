@@ -1,4 +1,4 @@
-import '../assets/css/style.css';
+//import '../assets/css/style.css';
 
 
 
@@ -6,13 +6,13 @@ import '../assets/css/style.css';
 console.log('Hello by js');
 
 const app = document.getElementById('app');
-app.innerHTML = '<h1>Hello by JavaScript Basics</h1>';
+app.innerHTML = '<p>Hello to BootcampPizza by JavaScript Basics</p>';
 
 
 
 //dan 2
 const desc = document.getElementById('social');
-desc.innerHTML = '<a href="https://www.facebook.com"><img class="social-icon" src="images/fb_ico.png" /></a>';
+desc.innerHTML = '<a href="https://www.facebook.com"><img class="social-icon" src="assets/images/fb_ico.png" /></a>';
 //Rad sa CSS
 //Pravljenje menija
 
@@ -120,7 +120,7 @@ monthString = 'October';
 //monthString=dateNow.getMonth();
 
 //Kraj
-app.innerHTML += `<h2>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${monthString} ${dateNow.getFullYear()}.</h2>`
+app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${monthString} ${dateNow.getFullYear()}.</p>`
 
 
 //Dan3
@@ -241,13 +241,23 @@ function incrementPizzaCount() {
 }
 //incrementPizzaCount();
 
-var pizzas = document.getElementsByClassName('element');
-for (let pizza of pizzas) {
-    pizza.addEventListener('click', function () {
-        selectPizza(pizza);
+var pizzaFooters = document.getElementsByClassName('item-footer');
+var orderButtons=new Array();
+for(let footer of pizzaFooters){
+    for(let button of footer.getElementsByTagName('button')){
+    orderButtons.push(button);
+    }
+    console.log(orderButtons);
+
+}
+    
+for (let button of orderButtons) {
+    console.log(button);
+    button.addEventListener('click', function () {
+        selectPizza(button);
     });
 }
-var counterField = document.getElementById('cnt');
+var counterField = document.getElementById('counter');
 counterField.innerHTML = `${pizzaCount}`;
 function selectPizza(e) {
     console.log(e);
@@ -259,7 +269,6 @@ function selectPizza(e) {
 //Dan 4
 //Jos DOM-a
 // prototip dodavanje porucene pize u listu
-
 
 
 //Nedelja 4
@@ -291,6 +300,7 @@ var pizzaObjects = {
     ]
 };
 console.log(pizzaObjects);
+//Klasa
 class Size {
     constructor(name, size, price) {
         this.name = name;
@@ -299,16 +309,29 @@ class Size {
     }
 
 }
+
 {
     let sizetest = new Size('XL', 50, 600);
     console.log(sizetest.name);
 }
-let sizes = [new Size('XL', 50, 600),new Size('L',32    ,450)];
+
+let sizes = [new Size('XL', 50, 600),new Size('L',32,450)];
+
 console.log(sizes);
+
 var allPizzas = [{
-    name: 'Capricosa',
+    name: 'Capriccosa',
     sizes: sizes
 }, {name: 'Margarita',
     sizes: sizes
-}]
+}, {name: 'Quattro stagioni',
+sizes: sizes
+}, {name: 'Diavola',
+sizes: sizes
+}, {name: 'Pascolo',
+sizes: sizes
+}, {name: 'Giardiniera',
+sizes: sizes
+}];
+
 console.log(allPizzas);

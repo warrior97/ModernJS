@@ -32,10 +32,11 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, 'index.html'),
-      favicon: 'assets/img/favicon.png',
+      favicon: 'assets/images/favicon.png',
     }),
     new CopyWebpackPlugin([
-      {from:'./assets/img',to:'images'} 
+      {from:'./assets/images',to:'./assets/images'},
+      {from: './assets/css', to:'./assets/css'} 
   ]),
   ],
   stats: 'minimal',
