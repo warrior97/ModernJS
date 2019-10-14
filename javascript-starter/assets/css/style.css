@@ -53,6 +53,13 @@ main{
   height:70px;
   vertical-align: middle;
 }
+#logo-itb{
+  position: relative;
+  display:inline-block;
+  height: 43px;
+  width: 200px;
+  vertical-align: middle;
+}
 
 #menu{
   padding:40px 0 0 0 ;
@@ -113,6 +120,66 @@ nav ul li{
   display:inline-block;
 }
 
+/*shopping cart--------------------------------*/
+.cart{
+  display:block;
+  float:right;margin-top:20px;
+}
+
+.cart a{
+  text-decoration: none;
+}
+
+.cart a img{
+  width:30px !important;
+  height:30px !important;
+}
+
+.cart a .badge{
+  display: inline-block;
+  color:#ffffff;
+  background:red;
+  border-radius:15px;
+  padding:3px 8px 2px 8px;
+}
+
+.cart-pop{
+  position:absolute;
+  z-index:1;
+  top:60px;
+  right:0;
+  background:#ffffff;
+  border-radius:8px;
+  padding:20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+}
+
+.cart-pop table tfoot td{
+  border-top:1px solid orange;
+  padding-top:10px;
+}
+
+.cart-pop table td{
+  padding:3px 10px;
+  margin:0;
+}
+
+.cart-pop table th{
+  padding:3px 10px;
+  color: #FFB973;
+  border-bottom:1px solid orange;
+}
+
+.cart-pop button{
+  padding:10px 25px;
+  border-radius:8px;
+  color:#ffffff;
+  background:red;
+  width:100%;
+  font-size: 20px;
+  border:none;
+  margin-top:20px;
+}
 
 /*item--------------------------------*/
 .item{
@@ -142,15 +209,7 @@ nav ul li{
   padding:10px 25px;
   border-radius:8px;
 }
-.item-footer select{
-  float:left;
-  font-size:20px;
-  margin-left:5px;
-  background:#ffffff;
-  padding:8px 20px;
-  border: 0px;
-  border-radius:8px;
-}
+
 .item-footer button{
   float:right;
   background:#000;
@@ -163,6 +222,17 @@ nav ul li{
 .item-footer button:hover{
   cursor: pointer;
 }
+.footer-column{
+  display: inline-block;
+  width: 49%;
+  
+}
+#powered{
+  text-align: end;
+}
+#powered img{
+  margin-left: 10px;
+}
 
 /*fixes--------------------------------*/
 img{
@@ -172,4 +242,19 @@ img{
 .social-icon{
   width: 24px;
   height: 24px;
+}
+
+select{
+  float:left;
+  border:none;
+  border-radius:8px;
+  padding:10px 5px;
+  font-size:20px;
+  background:#F7A61D;
+  color:#ffffff;
+  margin-right:10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Teko', sans-serif;
 }

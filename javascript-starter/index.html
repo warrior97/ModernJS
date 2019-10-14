@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <title>Bootcamp Pizza - Order now!</title>
 </head>
 
 <body>
@@ -21,7 +22,42 @@
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
-                <p id='counter'></p>
+                
+                <div class="cart" id="cart">
+                    <a href="#">
+                        <span class="badge" id="counter">0</span>
+                        <img src="assets/images/icons/basket.png" alt="Shopping basket">
+                    </a>
+                </div>
+                <div class="cart-pop" id="cart-pop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Size</th>
+                                <th align="right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Margherita</td>
+                                <td>Small</td>
+                                <td align="right">8$</td>
+                            </tr>
+                            <tr>
+                                <td>Capricciosa</td>
+                                <td>Small</td>
+                                <td align="right">10$</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td align="right" colspan="3">TOTAL: <strong>18$</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button>Pay now</button>
+                </div>
             </div>
         </header>
         <main>
@@ -63,7 +99,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>10 $</strong>
-                                    <button>Order</button>
+                                    <select class="size">
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -79,7 +121,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>11 $</strong>
-                                    <button>Order</button>
+                                    <select class="size">
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -94,7 +142,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>11 $</strong>
-                                    <button>Order</button>
+                                    <select class="size">
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -109,7 +163,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>12 $</strong>
-                                    <button>Order</button>
+                                    <select class="size">
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -124,7 +184,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>14 $</strong>
-                                    <button>Order</button>
+                                    <select class="size">
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -152,7 +218,8 @@
         </main>
         <footer class="page-footer">
             <div class="container">
-                <h5>Bootcamp pizza</h5>
+                <div class="footer-column">
+                  <h5>Bootcamp pizza</h5>
                 <address>
                     <p>Funny street 55, East Heaven 343 <br>
                         Long Beach Country
@@ -160,6 +227,8 @@
                     Phone: +0123456789
                   </address>
                 <div id="social"></div>
+              </div>
+              <div id="powered" class="footer-column"><label>Powered by </label><img src="assets/images/logo_itbootcamp_trans.png" id="logo-itb"/></div>
             </div>
         </footer>
     </div>

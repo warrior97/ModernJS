@@ -12,7 +12,9 @@ app.innerHTML = '<p>Hello to BootcampPizza by JavaScript Basics</p>';
 
 //dan 2
 const desc = document.getElementById('social');
-desc.innerHTML = '<a href="https://www.facebook.com"><img class="social-icon" src="assets/images/fb_ico.png" /></a>';
+desc.innerHTML = '<a href="https://www.facebook.com" target="_blank"><img class="social-icon" src="assets/images/fb_ico.png" /></a>';
+
+
 //Rad sa CSS
 //Pravljenje menija
 
@@ -247,12 +249,12 @@ for(let footer of pizzaFooters){
     for(let button of footer.getElementsByTagName('button')){
     orderButtons.push(button);
     }
-    console.log(orderButtons);
+    //console.log(orderButtons);
 
 }
     
 for (let button of orderButtons) {
-    console.log(button);
+    //console.log(button);
     button.addEventListener('click', function () {
         selectPizza(button);
     });
@@ -268,8 +270,28 @@ function selectPizza(e) {
 
 //Dan 4
 //Jos DOM-a
-// prototip dodavanje porucene pize u listu
+// prototip dodavanje porucene pize u listu i otvaranje kolica
 
+let cart=document.getElementById('cart-pop');
+cart.style.display='none';
+var cartOpen=false;
+
+var cartButton=document.getElementById('cart');
+
+cartButton.addEventListener('click',function(){
+openCart();
+});
+
+function openCart(){
+    let status;
+    if(cartOpen){
+        status='none';
+    }else{
+        status='block';
+    }
+    cart.style.display=status;
+    cartOpen=!cartOpen;
+}
 
 //Nedelja 4
 //Dan 1
