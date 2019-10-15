@@ -1,24 +1,29 @@
+/*type------------------------------------------*/
 body{
   background:orange;
   padding:0;
   margin:0;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 main{
   display: block;
   text-align: center;
 }
+
 #banner{
   position:relative;
   height:380px;
   background: url(../images/photos/pizza-banner.jpg) no-repeat;
   background-position: center center;
   border-top:1px solid #000000;
-  border-bottom:1px solid #000000;
+  border-bottom:1px solid #fff;
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56); */
+
 }
 #banner h2{
   font-size:60px;
-  color:#ffffff;
+  color:#F8B976;
   margin:0;
   position:absolute;
   left:100px;
@@ -26,8 +31,10 @@ main{
   letter-spacing: 2px;
   text-transform: uppercase;
   text-align: center;
+  line-height:1em;
 }
 .container{
+  position: relative;
   display:inline-block;
   /* min-width:1200px;
   max-width:1380px; */
@@ -40,18 +47,25 @@ main{
 }
 #page-header{
   position: sticky;
-  top: 0px;
-  z-index: 100 ;
+  top:0;
   background:#ffffff;
   padding:10px 0;
   text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+  position: sticky;
+  top:0;
+  z-index:2;
 }
 
-#page-header #logo{
+#page-header img{
   display:inline-block;
   width:70px;
   height:70px;
   vertical-align: middle;
+}
+
+#menu{
+  padding:40px 0 0 0 ;
 }
 #logo-itb{
   position: relative;
@@ -60,11 +74,6 @@ main{
   width: 200px;
   vertical-align: middle;
 }
-
-#menu{
-  padding:40px 0 0 0 ;
-}
-
 article{
   background:#ffffff;
   border-radius:8px;
@@ -105,19 +114,31 @@ article p{
 
 
 /*navigation--------------------------------*/
+/*navigation--------------------------------*/
 
 nav{
   display:inline-block;
   margin-left:30px;
 }
+
 nav ul{
   display:block;
   margin:0;
   padding:0;
   list-style: none;
 }
+
 nav ul li{
   display:inline-block;
+}
+
+nav ul li a{
+  color:orange;
+  font-size:24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin:0 20px;
+  font-family: 'Teko', sans-serif;
 }
 
 /*shopping cart--------------------------------*/
@@ -181,6 +202,13 @@ nav ul li{
   margin-top:20px;
 }
 
+.cart-pop table .cart-item:hover{
+  background: rgb(85, 85, 85,0.2);
+  border-color: rgb(85, 85, 85,0.2);
+  opacity: 0.2;
+cursor: pointer;
+}
+
 /*item--------------------------------*/
 .item{
   padding:20px;
@@ -188,20 +216,24 @@ nav ul li{
   background:#FFB973;
   margin-bottom:30px;
 }
+
 .item-img{
   max-width:80%;
   margin:auto;
 }
+
 .item-title{
   text-align: center;
   font-size: 22px;
   margin:0;
 }
+
 .item-footer:after{  /*clearfix*/
   content: "";
   display: table;
   clear: both;
 }
+
 .item-footer strong{
   float:left;
   font-size:20px;
@@ -216,7 +248,7 @@ nav ul li{
   border:0;
   padding:10px 25px;
   border-radius:8px;
-  color:#F7A61D;
+  color:#F8B976;
   font-size: 20px;
 }
 .item-footer button:hover{

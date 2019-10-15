@@ -122,7 +122,7 @@ monthString = 'October';
 //monthString=dateNow.getMonth();
 
 //Kraj
-app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDay()}. of ${monthString} ${dateNow.getFullYear()}.</p>`
+app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDate()}. of ${monthString} ${dateNow.getFullYear()}.</p>`
 
 
 //Dan3
@@ -244,53 +244,61 @@ function incrementPizzaCount() {
 //incrementPizzaCount();
 
 var pizzaFooters = document.getElementsByClassName('item-footer');
-var orderButtons=new Array();
-for(let footer of pizzaFooters){
-    for(let button of footer.getElementsByTagName('button')){
-    orderButtons.push(button);
+var orderButtons = new Array();
+for (let footer of pizzaFooters) {
+    for (let button of footer.getElementsByTagName('button')) {
+        orderButtons.push(button);
+
     }
     //console.log(orderButtons);
 
 }
-    
+
 for (let button of orderButtons) {
     //console.log(button);
     button.addEventListener('click', function () {
         selectPizza(button);
+
     });
 }
 var counterField = document.getElementById('counter');
 counterField.innerHTML = `${pizzaCount}`;
+
+
+//---------------------------------------------------//
 function selectPizza(e) {
     console.log(e);
+    let pizzaName = e.getAttribute('id');
+    let size = getPizzaSize(e);
+    addPizza(size, pizzaName);
     incrementPizzaCount();
     //ubaciti u korpu podatke o pici;
     counterField.innerHTML = `${pizzaCount}`;
 }
-
+//--------------------------------------------------//
 //Dan 4
 //Jos DOM-a
 // prototip dodavanje porucene pize u listu i otvaranje kolica
 
-let cart=document.getElementById('cart-pop');
-cart.style.display='none';
-var cartOpen=false;
+let cart = document.getElementById('cart-pop');
+cart.style.display = 'none';
+var cartOpen = false;
 
-var cartButton=document.getElementById('cart');
+var cartButton = document.getElementById('cart');
 
-cartButton.addEventListener('click',function(){
-openCart();
+cartButton.addEventListener('click', function () {
+    openCart();
 });
 
-function openCart(){
+function openCart() {
     let status;
-    if(cartOpen){
-        status='none';
-    }else{
-        status='block';
+    if (cartOpen) {
+        status = 'none';
+    } else {
+        status = 'block';
     }
-    cart.style.display=status;
-    cartOpen=!cartOpen;
+    cart.style.display = status;
+    cartOpen = !cartOpen;
 }
 
 //Nedelja 4
@@ -337,23 +345,90 @@ class Size {
     console.log(sizetest.name);
 }
 
-let sizes = [new Size('XL', 50, 600),new Size('L',32,450)];
+let sizes = [new Size('XL', 50, 600), new Size('L', 32, 450), new Size('M', 24, 300), new Size('S', 15, 200)];
 
 console.log(sizes);
 
 var allPizzas = [{
     name: 'Capriccosa',
     sizes: sizes
-}, {name: 'Margarita',
+}, {
+    name: 'Margarita',
     sizes: sizes
-}, {name: 'Quattro stagioni',
-sizes: sizes
-}, {name: 'Diavola',
-sizes: sizes
-}, {name: 'Pascolo',
-sizes: sizes
-}, {name: 'Giardiniera',
-sizes: sizes
+}, {
+    name: 'Quattro stagioni',
+    sizes: sizes
+}, {
+    name: 'Diavola',
+    sizes: sizes
+}, {
+    name: 'Pascolo',
+    sizes: sizes
+}, {
+    name: 'Giardiniera',
+    sizes: sizes
 }];
-
+//Dan 2
 console.log(allPizzas);
+function getPizzaSize(e) {
+    let id = e.getAttribute('id');
+    let select = document.getElementById(id);
+    let size = select.options[select.selectedIndex].value;
+
+    console.log(size);
+    return size;
+}
+
+//------------------------------------
+class Order {
+    constructor(name, size, price) {
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
+}
+//------------------------------------
+
+var totalPrice = 0;
+var allOrders=new Array();
+function addPizza(size, name) {
+    let pizza = allPizzas.find(function (element) {
+        return element.name == name;
+    });
+
+    let sizeObj = pizza.sizes.find(function (element) {
+        return element.name == size;
+    });
+
+    let price = sizeObj.price;
+
+    totalPrice += price;
+
+    let order=new Order(name, size, price)
+    allOrders.push(order);
+    console.log(allOrders);
+
+    updateOrderContent();
+
+}
+
+
+
+function updateOrderContent() {
+    let orderContent = document.getElementById('order-content');
+    orderContent.innerHTML="";
+
+    for(let order of allOrders){
+    orderContent.innerHTML += `<tr class="cart-item"><td>${order.name}</td><td>${order.size}</td><td align="right">${order.price}$</td></tr>`;
+    }
+
+    document.getElementById('order-sum').innerHTML = totalPrice + '$';
+}
+
+//Dan 3
+//Izbacivanje pice iz porudzbina
+
+
+
+//Dan 4
+//Postavljanje porudzbine

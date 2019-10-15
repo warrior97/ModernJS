@@ -17,12 +17,11 @@
                 <img src="assets/images/logo.png" alt="" id="logo">
                 <nav>
                     <ul>
-                        <li><a href="">Menu</a></li>
-                        <li><a href="">Ordering</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#ordering">Ordering</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
-                
                 <div class="cart" id="cart">
                     <a href="#">
                         <span class="badge" id="counter">0</span>
@@ -38,8 +37,8 @@
                                 <th align="right">Price</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
+                        <tbody id='order-content'>
+                          <!---<tr>
                                 <td>Margherita</td>
                                 <td>Small</td>
                                 <td align="right">8$</td>
@@ -49,10 +48,11 @@
                                 <td>Small</td>
                                 <td align="right">10$</td>
                             </tr>
+                            -->  
                         </tbody>
                         <tfoot>
                             <tr>
-                                <td align="right" colspan="3">TOTAL: <strong>18$</strong></td>
+                                <td align="right" colspan="3">TOTAL: <strong id='order-sum'>18$</strong></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -78,13 +78,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>8 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Margarita'>
                                       <option value="XL">XL</option>
                                       <option value="L">L</option>
                                       <option value="M">M</option>
                                       <option value="S">S</option>
                                     </select>
-                                    <button>Order</button>
+                                    <button id='Margarita'>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -99,13 +99,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>10 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Capriccosa'>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
                                         <option value="M">M</option>
                                         <option value="S">S</option>
                                       </select>
-                                      <button>Order</button>
+                                      <button id='Capriccosa'>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -121,13 +121,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>11 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Quattro stagioni'>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
                                         <option value="M">M</option>
                                         <option value="S">S</option>
                                       </select>
-                                      <button>Order</button>
+                                      <button id='Quattro stagioni'>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -142,13 +142,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>11 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Diavola'>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
                                         <option value="M">M</option>
                                         <option value="S">S</option>
                                       </select>
-                                      <button>Order</button>
+                                      <button id='Diavola'>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -163,13 +163,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>12 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Pascolo'>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
                                         <option value="M">M</option>
                                         <option value="S">S</option>
                                       </select>
-                                      <button>Order</button>
+                                      <button id='Pascolo'>Order</button>
                                 </div>
                             </div>
                         </div>
@@ -184,13 +184,13 @@
                                 </p>
                                 <div class="item-footer">
                                     <strong>14 $</strong>
-                                    <select class="size">
+                                    <select class="size" id='Giardiniera'>
                                         <option value="XL">XL</option>
                                         <option value="L">L</option>
                                         <option value="M">M</option>
                                         <option value="S">S</option>
                                       </select>
-                                      <button>Order</button>
+                                      <button id='Giardiniera'>Order</button>
                                 </div>
                             </div>
                         </div>
