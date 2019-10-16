@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Teko&display=swap" rel="stylesheet">
+    <title>Bootcamp Pizza - Order now!</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header id="page-header">
+            <div class="container">
+                <img src="assets/images/logo.png" alt="" id="logo">
+                <nav>
+                    <ul>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#ordering">Ordering</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="cart" id="cart">
+                    <a href="#">
+                        <span class="badge" id="counter">0</span>
+                        <img src="assets/images/icons/basket.png" alt="Shopping basket">
+                    </a>
+                </div>
+                <div class="cart-pop" id="cart-pop">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Size</th>
+                                <th align="right">Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id='order-content'>
+                          <!---<tr>
+                                <td>Margherita</td>
+                                <td>Small</td>
+                                <td align="right">8$</td>
+                            </tr>
+                            <tr>
+                                <td>Capricciosa</td>
+                                <td>Small</td>
+                                <td align="right">10$</td>
+                            </tr>
+                            -->  
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td align="right" colspan="3">TOTAL: <strong id='order-sum'>18$</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <button>Pay now</button>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section id="banner">
+                <h2>Order <br> now!</h2>
+            </section>
+            <div class="container">
+                <section id="menu">
+                    <div class="row">
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/margarita.png" alt="Pizza Margarita">
+                                </div>
+                                <h5 class="item-title">Margarita</h5>
+                                <p class="item-description">
+                                    Tomato and mozzarella
+                                </p>
+                                <div class="item-footer">
+                                    <strong>8 $</strong>
+                                    <select class="size" id='Margarita'>
+                                      <option value="XL">XL</option>
+                                      <option value="L">L</option>
+                                      <option value="M">M</option>
+                                      <option value="S">S</option>
+                                    </select>
+                                    <button id='Margarita'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/caprcciosa.png" alt="Pizza Capricciosa">
+                                </div>
+                                <h5 class="item-title">Capricciosa</h5>
+                                <p class="item-description">
+                                        Tomato, mozzarella, olives, ham, boiled egg
+                                </p>
+                                <div class="item-footer">
+                                    <strong>10 $</strong>
+                                    <select class="size" id='Capriccosa'>
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button id='Capriccosa'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/4stagione.png" alt="Pizza Quattro stagioni">
+                                </div>
+                                <h5 class="item-title">Quattro stagioni</h5>
+                                <p class="item-description">
+                                        Tomato, mozzarella, mushrooms,
+                                        artichokes
+                                </p>
+                                <div class="item-footer">
+                                    <strong>11 $</strong>
+                                    <select class="size" id='Quattro stagioni'>
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button id='Quattro stagioni'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/diavola.png" alt="Pizza Diavola">
+                                </div>
+                                <h5 class="item-title">Diavola</h5>
+                                <p class="item-description">
+                                        Tomato, mozzarella, onion, chili pepper
+                                </p>
+                                <div class="item-footer">
+                                    <strong>11 $</strong>
+                                    <select class="size" id='Diavola'>
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button id='Diavola'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/pascolo.png" alt="Pizza Pascolo">
+                                </div>
+                                <h5 class="item-title">Pascolo</h5>
+                                <p class="item-description">
+                                        Mozzarella, stracchino, prosciutto, rocket
+                                </p>
+                                <div class="item-footer">
+                                    <strong>12 $</strong>
+                                    <select class="size" id='Pascolo'>
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button id='Pascolo'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col l-4of12">
+                            <div class="item">
+                                <div class="item-img">
+                                    <img src="assets/images/photos/giardiniera.png" alt="Pizza Giardiniera">
+                                </div>
+                                <h5 class="item-title">Giardiniera</h5>
+                                <p class="item-description">
+                                        Mozzarella, courgettes, aubergines, peppers
+                                </p>
+                                <div class="item-footer">
+                                    <strong>14 $</strong>
+                                    <select class="size" id='Giardiniera'>
+                                        <option value="XL">XL</option>
+                                        <option value="L">L</option>
+                                        <option value="M">M</option>
+                                        <option value="S">S</option>
+                                      </select>
+                                      <button id='Giardiniera'>Order</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <article>
+                    <div id="app"></div>
+                    <h3>
+                        How to order?
+                    </h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum venenatis massa,
+                        imperdiet
+                        venenatis lacus hendrerit ultrices. Curabitur vitae ante a velit sodales tincidunt. Aenean
+                        rhoncus
+                        lacinia massa at interdum.
+                    </p>
+                    <h3>Payment</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras interdum venenatis massa, imperdiet
+                        venenatis lacus hendrerit ultrices. Curabitur vitae ante a velit sodales tincidunt. Aenean
+                        rhoncus
+                        lacinia massa at interdum.</p>
+                </article>
+            </div>
+        </main>
+        <footer class="page-footer">
+            <div class="container">
+                <div class="footer-column">
+                  <h5>Bootcamp pizza</h5>
+                <address>
+                    <p>Funny street 55, East Heaven 343 <br>
+                        Long Beach Country
+                    </p>
+                    Phone: +0123456789
+                  </address>
+                <div id="social"></div>
+              </div>
+              <div id="powered" class="footer-column"><label>Powered by </label><img src="assets/images/logo_itbootcamp_trans.png" id="logo-itb"/></div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

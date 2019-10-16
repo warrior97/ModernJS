@@ -1,0 +1,292 @@
+/*type------------------------------------------*/
+body{
+  background:orange;
+  padding:0;
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+  display: block;
+  text-align: center;
+}
+
+#banner{
+  position:relative;
+  height:380px;
+  background: url(../images/photos/pizza-banner.jpg) no-repeat;
+  background-position: center center;
+  border-top:1px solid #000000;
+  border-bottom:1px solid #fff;
+  /* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56); */
+
+}
+#banner h2{
+  font-size:60px;
+  color:#F8B976;
+  margin:0;
+  position:absolute;
+  left:100px;
+  top:60px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+  line-height:1em;
+}
+.container{
+  position: relative;
+  display:inline-block;
+  /* min-width:1200px;
+  max-width:1380px; */
+  width:1200px;
+  margin:0 auto;
+  text-align: left;
+}
+#counter{
+  float:right;
+}
+#page-header{
+  position: sticky;
+  top:0;
+  background:#ffffff;
+  padding:10px 0;
+  text-align: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+  position: sticky;
+  top:0;
+  z-index:2;
+}
+
+#page-header img{
+  display:inline-block;
+  width:70px;
+  height:70px;
+  vertical-align: middle;
+}
+
+#menu{
+  padding:40px 0 0 0 ;
+}
+#logo-itb{
+  position: relative;
+  display:inline-block;
+  height: 43px;
+  width: 200px;
+  vertical-align: middle;
+}
+article{
+  background:#ffffff;
+  border-radius:8px;
+  padding:20px 20px 1px 20px;
+  margin-bottom:40px;
+}
+
+article h3{
+  margin:0 0 10px 0;
+}
+
+article p{
+  margin:0 0 20px 0;
+}
+
+.page-footer{
+  background:#555555;
+  text-align: center;
+  color:#F8B976;
+  padding:40px 0;
+}
+
+#app p{
+  font-weight: bold;
+  margin: 5px 0; 
+}
+
+/*micro-grid--------------------------------*/
+
+.row{
+  margin:0 -15px 20px -15px;
+}
+.l-4of12{
+  display:inline-block;
+  width: calc(33.3333333333% - 33px);
+  margin:0 15px;
+}
+
+
+/*navigation--------------------------------*/
+/*navigation--------------------------------*/
+
+nav{
+  display:inline-block;
+  margin-left:30px;
+}
+
+nav ul{
+  display:block;
+  margin:0;
+  padding:0;
+  list-style: none;
+}
+
+nav ul li{
+  display:inline-block;
+}
+
+nav ul li a{
+  color:orange;
+  font-size:24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin:0 20px;
+  font-family: 'Teko', sans-serif;
+}
+
+/*shopping cart--------------------------------*/
+.cart{
+  display:block;
+  float:right;margin-top:20px;
+}
+
+.cart a{
+  text-decoration: none;
+}
+
+.cart a img{
+  width:30px !important;
+  height:30px !important;
+}
+
+.cart a .badge{
+  display: inline-block;
+  color:#ffffff;
+  background:red;
+  border-radius:15px;
+  padding:3px 8px 2px 8px;
+}
+
+.cart-pop{
+  position:absolute;
+  z-index:1;
+  top:60px;
+  right:0;
+  background:#ffffff;
+  border-radius:8px;
+  padding:20px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+}
+
+.cart-pop table tfoot td{
+  border-top:1px solid orange;
+  padding-top:10px;
+}
+
+.cart-pop table td{
+  padding:3px 10px;
+  margin:0;
+}
+
+.cart-pop table th{
+  padding:3px 10px;
+  color: #FFB973;
+  border-bottom:1px solid orange;
+}
+
+.cart-pop button{
+  padding:10px 25px;
+  border-radius:8px;
+  color:#ffffff;
+  background:red;
+  width:100%;
+  font-size: 20px;
+  border:none;
+  margin-top:20px;
+}
+
+.cart-pop table .cart-item:hover{
+  background: rgb(85, 85, 85,0.2);
+  border-color: rgb(85, 85, 85,0.2);
+  opacity: 0.2;
+cursor: pointer;
+}
+
+/*item--------------------------------*/
+.item{
+  padding:20px;
+  border-radius:8px;
+  background:#FFB973;
+  margin-bottom:30px;
+}
+
+.item-img{
+  max-width:80%;
+  margin:auto;
+}
+
+.item-title{
+  text-align: center;
+  font-size: 22px;
+  margin:0;
+}
+
+.item-footer:after{  /*clearfix*/
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.item-footer strong{
+  float:left;
+  font-size:20px;
+  background:#ffffff;
+  padding:10px 25px;
+  border-radius:8px;
+}
+
+.item-footer button{
+  float:right;
+  background:#000;
+  border:0;
+  padding:10px 25px;
+  border-radius:8px;
+  color:#F8B976;
+  font-size: 20px;
+}
+.item-footer button:hover{
+  cursor: pointer;
+}
+.footer-column{
+  display: inline-block;
+  width: 49%;
+  
+}
+#powered{
+  text-align: end;
+}
+#powered img{
+  margin-left: 10px;
+}
+
+/*fixes--------------------------------*/
+img{
+  max-width:100%;
+}
+
+.social-icon{
+  width: 24px;
+  height: 24px;
+}
+
+select{
+  float:left;
+  border:none;
+  border-radius:8px;
+  padding:10px 5px;
+  font-size:20px;
+  background:#F7A61D;
+  color:#ffffff;
+  margin-right:10px;
+}
+
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Teko', sans-serif;
+}
