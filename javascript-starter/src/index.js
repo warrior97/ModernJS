@@ -169,15 +169,16 @@ function logMessage(message) {
     console.log(`${message}`);
 }
 logMessage("Hello World with parameter!");
-function getTimeFormat(now) {
-    return `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
-}
 
 function logMessageTimeStamp(message) {
     let now = new Date();
 
-    logMessage(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${message}`);
+    //logMessage(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${message}`);
     logMessage(`[${getTimeFormat(now)}] ${message}`);
+}
+
+function getTimeFormat(now) {
+    return `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
 }
 
 logMessageTimeStamp('Hello World!');
