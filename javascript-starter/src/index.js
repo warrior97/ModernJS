@@ -158,6 +158,31 @@ app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDate()}. of ${mon
 //Dan 4
 //Funkcije
 
+//Kako napisati funkciju
+function helloWorld() {
+    console.log('Hello World!');
+}
+helloWorld();
+
+//Parametri
+function logMessage(message) {
+    console.log(`${message}`);
+}
+logMessage("Hello World with parameter!");
+function getTimeFormat(now) {
+    return `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+}
+
+function logMessageTimeStamp(message) {
+    let now = new Date();
+
+    logMessage(`[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${message}`);
+    logMessage(`[${getTimeFormat(now)}] ${message}`);
+}
+
+logMessageTimeStamp('Hello World!');
+
+
 
 function sumNumbers(limit) {
     let sumNum = 0;
@@ -176,13 +201,11 @@ function sumNumbers(limit) {
 }
 //Zadaci za vezbanje s funkcijama
 
-
-
 //Nedelja 3
 //funkcije nizovi
 //Dan 1
 //teroijska prica o nizovima
-//zadatak ispis elemente niza
+//zadatak ispis elemente niza  
 {
     let array = new Array();
     array.push(10);
@@ -306,7 +329,28 @@ function openCart() {
 //Objekti
 //Kreiranje objekta pizze;
 //neki jednostavan objekat
-var pizzaObjects = {
+{
+    let object = { 
+        name: "Pera",
+        surname: "Peric",
+        age: 25
+    }
+    console.log(object);
+    
+    //Vezba, napraviti objekat koji sadrzi podatke o porudzbini
+    //Potrebno je da sadrzi naziv pice, velicinu i cenu; 
+    //Velicine su XL L M i S
+    {
+        //stuff
+    }
+}
+/*
+class Person{
+        
+}
+*/
+
+/*var pizzaObjects = {
     name: 'Capricosa',
     sizes: [
         {
@@ -330,6 +374,9 @@ var pizzaObjects = {
     ]
 };
 console.log(pizzaObjects);
+
+
+*/
 //Klasa
 class Size {
     constructor(name, size, price) {
@@ -390,7 +437,7 @@ class Order {
 //------------------------------------
 
 var totalPrice = 0;
-var allOrders=new Array();
+var allOrders = new Array();
 function addPizza(size, name) {
     let pizza = allPizzas.find(function (element) {
         return element.name == name;
@@ -404,7 +451,7 @@ function addPizza(size, name) {
 
     totalPrice += price;
 
-    let order=new Order(name, size, price)
+    let order = new Order(name, size, price)
     allOrders.push(order);
     console.log(allOrders);
 
@@ -416,19 +463,26 @@ function addPizza(size, name) {
 
 function updateOrderContent() {
     let orderContent = document.getElementById('order-content');
-    orderContent.innerHTML="";
+    orderContent.innerHTML = "";
 
-    for(let order of allOrders){
-    orderContent.innerHTML += `<tr class="cart-item"><td>${order.name}</td><td>${order.size}</td><td align="right">${order.price}$</td></tr>`;
+    for (let order of allOrders) {
+        orderContent.innerHTML += `<tr class="cart-item"><td>${order.name}</td><td>${order.size}</td><td align="right">${order.price}$</td></tr>`;
     }
 
     document.getElementById('order-sum').innerHTML = totalPrice + '$';
 }
 
 //Dan 3
-//Izbacivanje pice iz porudzbina
 
 
 
-//Dan 4
-//Postavljanje porudzbine
+
+
+
+
+
+
+import { add } from './modules/math.js';
+console.log(`From modules ${add(5, 2)}`);
+
+//Prebacivanje onih pocetnih trivijalnih funkcija u module i ciscenje koda
