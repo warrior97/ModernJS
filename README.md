@@ -9,7 +9,7 @@ Before you start, Node.JS is **reqired** to be **downloaded** and **installed**.
 First you need to download or clone this repository.
 To install all required modules run ```npm install```.
 To start the project, in folder javascript-starter run ```npm start```.
-##Usage
+## Usage
 - ```javascript-starter``` is a bunch of javascript code thrown in to craete the course.
 - ```bare-project``` is the starting point.
 - ```working-project``` is the project we will be working on.
