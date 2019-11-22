@@ -3,33 +3,24 @@
 
 
 //dan 1
+//Namestanje okruzenja
 console.log('Hello by js');
 
 const app = document.getElementById('app');
 app.innerHTML = '<p>Hello to BootcampPizza by JavaScript Basics</p>';
 
-
-
-//dan 2
 const desc = document.getElementById('social');
 desc.innerHTML = '<a href="https://www.facebook.com" target="_blank"><img class="social-icon" src="assets/images/fb_ico.png" /></a>';
 
 
-//Rad sa CSS
-//Pravljenje menija
-
-
-//dan 3
-//bootstrap
-//Primer staticke web strane
-
-//dan 4
+//dan 2
 //git
 
+//Dan 3
+//Svea CSS
 
-//--------------------------------------------------
-//Druga nedelja
-//Dan 1
+//Dan 4
+//Uvod u JS
 {
     var a = 'Dobar dan';
     console.log(a);
@@ -38,6 +29,20 @@ desc.innerHTML = '<a href="https://www.facebook.com" target="_blank"><img class=
 }
 console.log(a);
 //console.log(b);
+//Primeri za scope
+
+//Zadatak 1
+//Napisati program koji ispisuje zbir, razliku, proizvod i kolicnk
+
+//Objasniti const
+//Zadatak 2
+//Kreirati jos 2 const variable
+//pokusati da promenite jednu
+//--------------------------------------------------
+//Druga nedelja
+//Dan 1
+
+//Koja je razlika izmedju var i let?
 
 //Zadatak 1
 var naziv = 'ITPizza';
@@ -80,8 +85,19 @@ console.log(dateNow.getDay());
 console.log(hourNow + ':' + minuteNow + ':' + secNow);
 
 
-//dan 2
+//Dan 2
 //
+//Primer za IF
+{
+    let br=10;
+    if(br%2==0){
+        console.log(`${br} je paran broj!`);
+    }
+    //else
+}
+
+
+
 var dayOfWeek = dateNow.getDay();
 var cenaKap = 120;
 var kolicinaPice = 5;
@@ -116,7 +132,7 @@ switch (dayOfWeek) {
 }
 console.log(dayOfWeekString);
 //Zadatak 5
-//Odarditi istoovo ali za mesece
+//Odarditi isto ovo ali za mesece
 var monthString;
 monthString = 'October';
 //monthString=dateNow.getMonth();
@@ -135,11 +151,6 @@ app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDate()}. of ${mon
     }
 }
 
-//Dan 3
-//Zadatak 1
-//Napisati sledece program
-
-
 //Prog 1
 //Napisati program koji racuna sumu brojeva od 1 do N;
 
@@ -153,9 +164,35 @@ app.innerHTML += `<p>Today is ${dayOfWeekString}, ${dateNow.getDate()}. of ${mon
 }
 
 //Smisliti zadatak za vezbu
-//+While
+//Napisati program koji je radjen u for-u
+//Pomocu while-a
+{
+    let N=10;
+    let sumNum=0;
+    //------
+    let counter=1;
+    while(counter<=N){
+        sumNum+=counter;
+        counter++;
+    }
+    console.log('Sum from while: '+sumNum);
+}
+//Suma parnih
+
+//FizzBuzz
 
 //Dan 4
+//Vezbanje petlji
+
+
+//Nedelja 3
+//funkcije nizovi
+
+//Dan 1
+//TEST
+
+
+//Dan 2
 //Funkcije
 
 //Kako napisati funkciju
@@ -202,13 +239,12 @@ function sumNumbers(limit) {
 }
 //Zadaci za vezbanje s funkcijama
 
-//Nedelja 3
-//funkcije nizovi
-//Dan 1
+//Dan 3
 //teroijska prica o nizovima
 //zadatak ispis elemente niza  
 {
-    let array = new Array();
+
+      let array = new Array();
     array.push(10);
     array.push('Ads');
     array.push(15);
@@ -216,12 +252,28 @@ function sumNumbers(limit) {
     array.forEach(element => {
         console.log(element);
     });
+
+    array=[4,10,45,75,3,0,-2];
+    for(let i=0;i<array.length;i++){
+        console.log(array[i]);
+    }
+    for(let element of array){
+        console.log(element);
+    }
+    {
+        //Zadatak 1 - Sumiraj elemente niza
+    }
+
+    {
+        //Zadatak 2 - Nadji najveci element niza
+    }
+
 }
 
 //zadatak sumiraj elemente niza
 //Zadatak nadji najveci
 
-//dan 2
+//Dan 4
 //Napisati funkciju koja ispsisuje dan na nosovu broja
 
 function getDayFromNumberDay(day) {
@@ -239,6 +291,7 @@ function getDayFromNumberDay(day) {
 }
 getDayFromNumberDay(dateNow.getDay());
 
+//Broj pica
 //unction calculatePizzaPrice(pizzaBase,...rest){ <-pogledaj :D
 function calculatePizzaPrice(pizzaBase, count) {
     if (dayOfWeek === danZaPopust) {
@@ -254,10 +307,6 @@ function calculatePizzaPrice(pizzaBase, count) {
     let price = calculatePizzaPrice(10, 10);
     console.log(`Value of pizza selected is ${price} `);
 }
-//DOM
-//Dan 3
-//Broj pica
-
 //Zadatak1
 //Povecati broj pizza kad se klikne na pizu
 var pizzaCount = 0;
@@ -289,6 +338,11 @@ var counterField = document.getElementById('counter');
 counterField.innerHTML = `${pizzaCount}`;
 
 
+//Nedelja 4
+//Dan 1
+//Jos DOM-a
+// prototip dodavanje porucene pize u listu i otvaranje kolica
+
 //---------------------------------------------------//
 function selectPizza(e) {
     console.log(e);
@@ -300,9 +354,7 @@ function selectPizza(e) {
     counterField.innerHTML = `${pizzaCount}`;
 }
 //--------------------------------------------------//
-//Dan 4
-//Jos DOM-a
-// prototip dodavanje porucene pize u listu i otvaranje kolica
+
 
 let cart = document.getElementById('cart-pop');
 cart.style.display = 'none';
@@ -325,8 +377,7 @@ function openCart() {
     cartOpen = !cartOpen;
 }
 
-//Nedelja 4
-//Dan 1
+//Dan2
 //Objekti
 //Kreiranje objekta pizze;
 //neki jednostavan objekat
@@ -341,15 +392,34 @@ function openCart() {
     //Vezba, napraviti objekat koji sadrzi podatke o porudzbini
     //Potrebno je da sadrzi naziv pice, velicinu i cenu; 
     //Velicine su XL L M i S
-    {
-        //stuff
+    object={
+        name:'Capricosa',
+        size:'XL',
+        price:10
     }
+    let orders=[
+        {
+            name:'Capricosa',
+            size:'XL',
+            price:10
+        },
+        {
+            name:'Margarita',
+            size:'L',
+            price:8
+        },
+        {
+            name:'Vesuvo',
+            size:'M',
+            price:5
+        }
+    ];
+
+    console.log(orders);
+    //Napraviti niz osoba i ispisati ga
 }
-/*
-class Person{
-        
-}
-*/
+//Kreirati klasu osoba
+
 
 /*var pizzaObjects = {
     name: 'Capricosa',
@@ -378,7 +448,18 @@ console.log(pizzaObjects);
 
 
 */
+//Dan 3
 //Klasa
+//------------------------------------
+class Order {
+    constructor(name, size, price) {
+        this.name = name;
+        this.size = size;
+        this.price = price;
+    }
+}
+//------------------------------------
+
 class Size {
     constructor(name, size, price) {
         this.name = name;
@@ -387,7 +468,22 @@ class Size {
     }
 
 }
+class Person{
 
+    constructor(name,surname,age){
+        this.name=name;
+        this.surname=surname;
+        this.age=age;
+    }
+    toString(){
+        return `${this.name} ${this.surname}`;
+    }
+
+}
+
+var person= new Person('Petar','Petrovic',25);
+console.log(person);
+console.log(person.toString());
 {
     let sizetest = new Size('XL', 50, 600);
     console.log(sizetest.name);
@@ -396,7 +492,6 @@ class Size {
 let sizes = [new Size('XL', 50, 600), new Size('L', 32, 450), new Size('M', 24, 300), new Size('S', 15, 200)];
 
 console.log(sizes);
-
 var allPizzas = [{
     name: 'Capriccosa',
     sizes: sizes
@@ -416,7 +511,7 @@ var allPizzas = [{
     name: 'Giardiniera',
     sizes: sizes
 }];
-//Dan 2
+//Dan 4
 console.log(allPizzas);
 function getPizzaSize(e) {
     let id = e.getAttribute('id');
@@ -427,15 +522,6 @@ function getPizzaSize(e) {
     return size;
 }
 
-//------------------------------------
-class Order {
-    constructor(name, size, price) {
-        this.name = name;
-        this.size = size;
-        this.price = price;
-    }
-}
-//------------------------------------
 
 var totalPrice = 0;
 var allOrders = new Array();
@@ -472,18 +558,43 @@ function updateOrderContent() {
 
     document.getElementById('order-sum').innerHTML = totalPrice + '$';
 }
+//--------------------------------------------------
+//Nedelja 5
+//Dan 1 test
+
+//Dan 2
+//Nizovi
+
+//Dan 3
+//Sortiranje
+
+//Dan 4
+//Nizovi
+
+//Nedelja 6
+//Dan 1
+//OOP Klase
+//Private, public/Getters setter
+
+//Dan 2
+//Metode
+//Static
 
 //Dan 3
 
 
+//Nedelja 7
+//Dan 1 TEST Klase
 
-
-
-
-
-
-
-import { add } from './modules/math.js';
+//Dan 2
+/*import { add } from './modules/math.js';
 console.log(`From modules ${add(5, 2)}`);
-
+*/
 //Prebacivanje onih pocetnih trivijalnih funkcija u module i ciscenje koda
+
+//Dan 3
+//Vezbanje modula - POST/GET Requests
+
+//Dan 4 Vezbanje Requestova :D 
+
+
